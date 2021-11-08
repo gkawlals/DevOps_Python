@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원가입</legend>
+			<ol>
+				<li>이름<input type="text" id="user_id"/></li>
+				<li>성별 : <input type="radio" id="man"/>남자 <input type="radio" id="uman"/>여자</li>
+				<li>직업
+					<select>
+						<option value="데이터엔지니어">
+					</select>
+				</li>
+				<li>취미<input type="text" id="user_hob"/></li>
+				<li><input type="submit" id="check" alue="확인"/> <input type="button" value="취소" id="cancle"/></li>
+			</ol>
+		</fieldset>
+	</form>
+</body>
+</html>
