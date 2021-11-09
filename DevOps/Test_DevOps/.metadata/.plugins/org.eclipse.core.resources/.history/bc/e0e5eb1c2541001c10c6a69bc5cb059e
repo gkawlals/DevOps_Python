@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트의 for문 명령어</title>
+
+<script type="text/javascript">
+
+	var arr = ['함지민','김선일', '오현식', '이정후']
+	for (  i = 0; i <= arr.length; i++){
+		document.writeln(arr[i] + "<br/>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

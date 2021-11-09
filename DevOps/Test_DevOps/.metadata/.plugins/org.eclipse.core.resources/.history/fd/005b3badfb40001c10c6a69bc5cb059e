@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+/* div {color : red ; }
+.point10 { color : blue; }
+#point10 { color : green; }
+
+div { color : gray;} */
+
+
+/* 	속성값 선택 
+input[type="text"] 
+{
+	border : 2px solid red;
+}
+둘다 하게되면 속성값으로 만든 가중치가 높다
+첫번째 요소 
+input:first-of-type
+{
+	border : 2px solid green;
+}  */
+
+	input:lost-of-type{border : 2px solid blue;}
+	input:nth-child(5){border : 2px solid green;}
+	input:nth-last-child(2){border : 2px solid yellow;}
+
+</style>
+
+<title> 연습</title>
+</head>
+<body>
+	
+	<div id="point100" class="point10">안녕하세요</div>
+	
+	
+	<p>
+		<input type="text" value="입력1">
+		<input type="checkbox"> 선택
+		<input type="radio" name="rd"  checked="checked"> 예
+		<input type="radio" name="rd"> 아니오
+		<input type="text" value="입력2" disabled="disabled">		
+		<input type="button" value="확인">
+		<input type="button" value="취소">
+	</p>
+	
+	
+</body>
+</html>

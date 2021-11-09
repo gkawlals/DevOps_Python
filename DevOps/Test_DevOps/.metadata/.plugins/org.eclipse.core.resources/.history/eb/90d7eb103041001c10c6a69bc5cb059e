@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script type="text/javascript">
+	var d = new Date('2021/11/09');
+	document.writeln( d + '<br/>');
+	document.writeln( d.getFullYear() + "<br/>");
+	document.writeln( d.getMonth() + 1 + "<br/>");
+	document.writeln( d.getDate() + "<br/>");
+	document.writeln( d.getDay() + "<br/>");
+	
+	
+	var today = new Date(); 
+	today.setFullYear(2021);
+	today.setMonth(10);
+	today.setDate(9);
+	today.setDay(2);
+	
+	
+	document.writeln('<hr/>' + today + '<br/>' );
+	document.writeln(today.toLocaleString + "<br/>");
+	
+	
+	document.writeln( today.toGMTString()  + '<br/>');
+	document.writeln( today.toDateString()  + '<br/>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

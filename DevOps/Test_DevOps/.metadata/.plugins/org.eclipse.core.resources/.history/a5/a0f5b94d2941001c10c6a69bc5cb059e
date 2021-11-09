@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array 객체</title>
+
+<script type="text/javascript">
+
+var arr = ['송혜교', '김태희', '전지현', '김고은', '사미자']
+
+document.writeln( msg.charAt(3)+ '<br/>');
+document.writeln( msg.slice( 5, 12 )+ '<br/>');
+document.writeln( msg.substring( 5, 12 )+ '<br/>');
+document.writeln( msg.substr(5, 7 ) + '<br/>');
+document.writeln( msg.split(' ')+ '<br/>');
+document.writeln( msg.concat('화이팅')+ '<br/>');
+document.writeln( msg +  '<br/>');
+
+document.writeln( arr + '<br/>');
+document.writeln( arr.join('/')+ '<br/>');
+document.writeln( arr.slice(3) + '<br/>');
+document.writeln( arr.slice(1,3) + '<br/>');
+
+document.writeln( arr.pop() + '<br/>');   
+document.writeln( arr + '<br/>');
+document.writeln( arr.push('사미자') + '<br/>');
+document.writeln( arr + '<br/>');
+document.writeln( arr.shift() + '<br/>');
+document.writeln( arr + '<br/>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

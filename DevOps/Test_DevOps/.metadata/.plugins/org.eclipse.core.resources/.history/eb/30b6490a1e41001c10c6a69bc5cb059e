@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트의 자료형</title>
+<script type="text/javascript">
+// 1. 자바스크립트의 데이터 타입에 관대하다. (값이 초기화될때 타입이 결정된다.)
+	var byensu = '문자열';
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니매이션</title>
+<style>
+	div {
+	 width:100px; height : 100px;
+	 background : red;
+	 position : relative;
+	 animation : myfirst 5 s;
+	}
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

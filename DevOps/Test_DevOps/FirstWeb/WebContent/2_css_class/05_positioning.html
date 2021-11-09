@@ -4,7 +4,32 @@
 <meta charset="UTF-8">
 <title>Positioning</title>
 </head>
+<style type="text/css">
+	#header { border : 3px solid black}
 
+	#left { float:left;   border : 3px dotted blue;  width: 220px; height:100px; }
+  	
+  	#content { float:right;   border : 3px solid red;  width:400px; height:400px;}
+   	
+   	#footer { clear:both; border : 3px dotted green; }
+   	/* 반응형 웹디자인, 크기가 변경되어도 고정되는 스타일*/
+   	#wrap { width:680px; margin:0px auto}
+   	
+</style>
+
+<!--  3. 내용만 프린트하려면 :  브라우저에서 인쇄 버튼을 확인하면 
+           화면에서 ctrl +p 를 누른후 미리보기를 본다면? -->
+<style type="text/css" media="print">
+      #header, #left, #footer { display:none; }
+</style>
+   
+ 
+
+   <!-- 4. 휴대전화용  -->
+<style type="text/css" media="screen and (max-width:410px)">
+      #left { display: none; } /* 폭이 410px 보다 작으면 왼쪽 영역을 안보기에 :다시 확인하자*/
+      #content { float : left }
+</style>
 <body>
 
 <div id="wrap">
@@ -20,6 +45,7 @@
 	<div id="footer">밑에 영역</div>
 </div>	
  
+
 
 </body>
 </html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 객체</title>
+<script type="text/javascript">
+
+	var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자'
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

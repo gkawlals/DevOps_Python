@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Global 객체 - 형변환</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//1. 형변환
+var  n = '0770'; 
+document.writeln( Number(n)  + "<br/>" );   
+document.writeln( parseFloat( n)  + "<br/>" );   
+document.writeln( parseInt ( n )  + "<br/>" );   
+
+
+var  n = '123abc' ;     // 'a123'  / '12a3''
+document.writeln( Number(n)  + "<br/>" );    // NaN : Not a Number
+document.writeln( parseFloat( n)  + "<br/>" );   
+document.writeln( parseInt ( n )  + "<br/>" );   
+
+document.writeln( 123 + '4' );   
+document.writeln( 123 - '4' );   
+
+document.writeln( typeof ( 123 + '4' )  + "<br/>" );   
+document.writeln( typeof(  123 - '4' ) + "<br/>" );   
+
+
+</script>
+</body>
+</html>
