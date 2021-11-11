@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 폼 예제 3 </title>
+<script type="text/javascript">
+/* 		function Click(){
+		
+			var frm = document.frm1;
+			
+			var date = new Date();
+			date = date.setYear(frm.y.value);
+			date = date.setMonth(frm.m.value - 1);
+			date = date.setDate(frm.d.value);
+			alert(date);
+			
+			var arr = ['일','월','화','수','목','금','토'];
+			
+			frm.w.value = arr[date.getDay()];
+			
+		} */
+		
+		   window.onload = function() {
+			      // 입력한 년, 월, 일 얻어와서 Date클래스 set함수를 이용하여 초기화
+			      document.getElementById('btn').onclick = function(){
+			         var frmObj = document.frm1;
+			         var myDate = new Date();
+			         myDate.setYear(frmObj.y.value);
+			         // frmobj에 있는 년도를 넣습니다
+			         myDate.setMonth(frmObj.m.value-1);
+			         // frmobj에 있는 월을 넣습니다
+			         myDate.setDate(frmObj.d.value);
+			         // frmobj에 있는 일을 넣습니다
+			          
+			          
+			         var weeks = new Array("일","월","화","수","목","금","토");
+			         frmObj.w.value = weeks[myDate.getDay()];
+			         //베열 = weeks의 방번호(일~토요일)
+
+			      }
+			      
+				var toDay = new Date(); 
+				document.frm1.y.value = toDay.getFullYear();
+				document.frm1.m.value = toDay.getMonth() + 1;
+				document.frm1.d.value = toDay.getDate();
+				
+				
+				var weeks1 = new Array("일","월","화","수","목","금","토");
+				document.frm1.w.value = weeks1[myDate.getDay()];
+			      
+			   }
+		
+		// 브라우져 = 현재날짜 , 요일 띄우기
+</script>
+</head>
+<body>
+
+<hr><hr>
+
+요일을 알아봅시다. <br>
+
+<form name="frm1">
+	<input type="text" name="y" size=4>년 
+	<input type="text" name="m" size=2>월
+	<input type="text" name="d" size=2>일
+	<input type="button" value="☞" id="btn">
+	<input type="text" name="w" size=4>요일입니다.
+</form>
+
+<hr><hr>
+
+
+</body>
+</html>

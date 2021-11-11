@@ -5,6 +5,37 @@
 <title> 폼 예제 2</title>
 </head>
 <script type="text/javascript">
+	function moveup(){
+		var idx = document.frm.play.selectedIndex;
+		var optSel = document.frm.play.options;
+		
+		var str = optSel[idx].text;
+		if (idx > 0){
+			
+			optSel[idx].text = optSel[idx-1].text;
+			
+			optSel[idx-1].text = str;
+			
+			optSel[idx - 1].selected = true;
+			
+		}
+		
+	} 
+	
+	function movedown(){
+		
+		var idx = document.frm.play.selectedIndex;
+		var optSel = document.frm.play.options;
+		var str = optSel[idx].text;
+		if (idx > 0){
+			
+			optSel[idx].text = optSel[idx+1].text;
+			optSel[idx+1].text = str;
+			optSel[idx+1].selected = true;
+			
+		}
+		
+	}
 </script>
 <body>
 
@@ -20,8 +51,8 @@
 	<option> 멍때리기 </option>
 </select> <br>
 
-<input type="button" id='up'	value="▲"><br><br>
-<input type="button" id='down'	value="▼"><br><br>
+<input type="button" id='up'	value="▲" onclick="javascript:moveup()"><br><br>
+<input type="button" id='down'	value="▼" onclick="javascript:movedown()"><br><br>
 </form>
 
 </body> 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="frm">
+	<input type="radio" name="U" />다음네
+	<input type="radio" name="U" />네이바
+	<input type="radio" name="U" />네이또 
+</form>
+</body>
+</html>

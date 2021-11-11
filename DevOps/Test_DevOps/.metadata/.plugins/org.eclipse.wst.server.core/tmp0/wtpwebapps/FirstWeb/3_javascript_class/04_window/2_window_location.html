@@ -29,11 +29,23 @@
 <script type="text/javascript">
 	function showSite()
 	{
+		
+		var winObj = window.open("", "newWin", "width = 420, height=320");
+		var idx = document.frm.chooseSite.selectedIndex;
+		if (idx == 1){
+			winObj.location.href = "http://www.daum.net";
+		}else if( idx == 2){
+			winObj.location.href = "https://www.naver.com";
+		}else if(idx == 3){
+			winObj.location.href = "http://www.nate.com";
+		}
+		
 		/*
 		1. 선택한 값의 인덱스를 얻어온다.
 		2. 각각의 인덱스에 맞는 새로운 창을 연다
 			[예] 인덱스 값이 1이라면 http://www.daum.net으로 창을 연다
 		*/
+		
 	
 	}
 </script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for를 이용한 테이블 생성</title>
+
+<script type="text/javascript">
+// 1번 화면에5행 5열 테이블 만들고 각각의 행의 컬럼값에 1~25 값을 넣기
+document.write('<table border = "1"');
+var a = 0
+for (var i = 0; i < 5; i++){
+	document.write('<tr>');
+	for (var j = 0; j < 5; j++){
+		a += 1;
+		document.write('<td>' + a + '</td>');
+	}
+	
+	document.write('</tr>');
+}
+
+document.write('<br/>')
+
+// 지각조 과제
+// 현제 달의 대한 달력 만들기 (표를 만들기) 7, 5 for 문 만들기
+
+var b = 0
+
+var date1  = new Date('2021/11/09');
+var day = date1.getDate();
+var mon = date1.getMonth() + 1;
+
+var date2 = new Date();
+var date = date2.getDate(); // 현재날짜 불러오기
+var mon2 = date2.getMonth() + 1; // 현재 월
+if (mon2 == ( mon2 % 2 == 0)){
+	document.writeln(mon2);
+}else {
+	
+	document.writeln(mon2);
+}
+
+date2.setDate('30'); // 마지막 날짜
+
+
+
+var Week = ['Sun','Mon', 'Tue', 'Wed','Thu','Fri','Sat'];
+// 월 찍어주기
+document.write('<table border="1">');
+document.write('<tr>');
+document.write('<th colspan="7">'+ mon2 +'</th>');
+document.write('</tr>');
+// 요일 표시해주기
+for (var x = 0; x < 7; x++){
+	
+	document.write('<th>'+Week[x]+'</th>');
+}
+// 날짜 1 ~ 30 찍어주기
+for (var i = 0; i < 5; i++){
+	document.write('<tr>');
+	for (var j = 0; j < 7; j++){
+		
+		if ( b >= date + 1){
+			document.write('<td></td>');
+		}
+		else if( b < 1 ){
+			document.write('<td></td>');
+		}
+		else {
+			document.write('<td>' + b + '</td>');	
+		}
+		b += 1;
+	}
+	document.write('</tr>');
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

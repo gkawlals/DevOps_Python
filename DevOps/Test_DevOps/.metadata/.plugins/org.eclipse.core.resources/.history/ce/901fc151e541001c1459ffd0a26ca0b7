@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		
+		var sel = document.frm.chooseSite; // select태그
+		sel.onchange = showSite;
+		
+		function showSite(){
+			
+			var selectSite = document.getElementByname('select')
+			
+		}
+		
+		
+	}
+
+</script>
+</head>
+<body>
+<form name="frm">
+	<select name="chooseSite">
+		<option onclick=""> 다음</option>
+		<option > 네이버</option>
+		<option > 네이버</option>
+	</select>
+</form>
+</body>
+</html>

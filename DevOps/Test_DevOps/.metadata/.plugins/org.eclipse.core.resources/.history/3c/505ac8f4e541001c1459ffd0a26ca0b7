@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		
+		var sel = document.frm.chooseSite; // select태그
+		sel.onchange = showSite;
+		
+		function showSite(){
+			
+			var selectSite = document.getElementByname('select').val
+			
+			if (selectSite == '0'){
+			 opener.location.href = "http://www.daum.net";break;
+		   
+			}else if ( selectSite == '1'){
+				opener.location = "http://www.naver.com";break;
+			   
+			}else if (selectSite == '2'){
+				
+			    opener.location = "http://www.nate.com";break;
+			}else {
+				alert('알수없는 에러 ');
+			}
+			
+		}
+		
+		
+	}
+
+</script>
+</head>
+<body>
+<form name="frm">
+	<select name="chooseSite">
+		<option onclick="JavaScript:showSite(0) "> 다음</option>
+		<option onclick="JavaScript:showSite(1)"> 네이버</option>
+		<option onclick="JavaScript:showSite(2)"> 네이트</option>
+	</select>
+</form>
+</body>
+</html>

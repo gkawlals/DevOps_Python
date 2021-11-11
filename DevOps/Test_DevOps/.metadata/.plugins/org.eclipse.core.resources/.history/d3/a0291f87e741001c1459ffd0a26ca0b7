@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부분 독립 페이지</title>
+</head>
+<body>
+
+   <form name="frm">
+      <input type="radio" name="site" value="다음사이트" onclick="javascript:changeSite()"> 다음 <br>
+      <input type="radio" name="site" value=네이버사이트" onclick="javascript:changeSite()"> 네이버 <br>
+      <input type="radio" name="site" value="다음사이트" onclick="javascript:changeSite()"> 네이트 <br>
+   </form>
+</body>
+</html>

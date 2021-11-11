@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3번 과제</title>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		
+		var Date = new Date();
+		var Now = document.Date;
+		
+	}
+
+</script>
+
+</head>
+<body>
+현재 날짜<input type="text" name="Date" /> <br>
+현재 요일<input type="text" name="Day" />
+</body>
+</html>

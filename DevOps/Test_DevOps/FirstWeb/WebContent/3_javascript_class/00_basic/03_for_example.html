@@ -26,33 +26,58 @@ document.write('<br/>')
 var b = 0
 
 var date1  = new Date('2021/11/09');
-var day = date1.getDay();
+var day = date1.getDate();
 var mon = date1.getMonth() + 1;
 
 var date2 = new Date();
+var date = date2.getDate(); // 현재날짜 불러오기
+var mon2 = date2.getMonth() + 1; // 현재 월
 
-var lastDay = date2.setDate('30');
+date2.setDate('30'); // 마지막 날짜
+
+
+var last = date2.getDate();
+
+
+if (mon2 == 2){
+	last = 28;
+	document.writeln(last);
+}
+else if (mon2 == (mon2 % 2 == 1)){
+	
+	document.write(mon2);
+	last = 31;
+	document.writeln(last);
+	
+}else {
+	document.writeln(mon2);
+	last = 30;
+	document.writeln(last);
+}
+/* var Toweek = date % 7 ;
+
+document.writeln(Toweek); */
 
 var Week = ['Sun','Mon', 'Tue', 'Wed','Thu','Fri','Sat'];
-
+// 월 찍어주기
 document.write('<table border="1">');
-
-var last = last.IndexOf(lastDay);
-
-document.write(last);
-
+document.write('<tr>');
+document.write('<th colspan="7">'+ mon2 +'</th>');
+document.write('</tr>');
+// 요일 표시해주기
 for (var x = 0; x < 7; x++){
+	
 	document.write('<th>'+Week[x]+'</th>');
 }
-
+// 날짜 1 ~ 30 찍어주기
 for (var i = 0; i < 5; i++){
 	document.write('<tr>');
 	for (var j = 0; j < 7; j++){
 		
-		if ( b >= lastDay){
+		if ( b >= last + 1){
 			document.write('<td></td>');
 		}
-		else if( b < 1){
+		else if( b < 1 ){
 			document.write('<td></td>');
 		}
 		else {
