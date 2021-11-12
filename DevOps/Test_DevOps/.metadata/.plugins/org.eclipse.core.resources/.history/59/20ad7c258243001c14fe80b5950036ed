@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#here{ 
+	background:#AABB33;  
+    position:absolute;  
+    top:0; left:0;
+    
+}
+</style>
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/* // 이벤트 함수
+		var here = $('#here');
+		here.click(function(){
+			here.text('클릭하면 내용이 바뀝니다');	
+		});
+		here.mouseenter(function(){
+			here.text('마우스가 들어왔습니다.');	
+		});
+		here.mouseleave(function(){
+			here.text('마우스가 나갔습니다.');	
+		});
+		here.hover(function(){
+			here.css('border','3px solid green');	
+		}),function(){
+		      here.css('border','3px dashed red');
+		   }; */
+		//$('#here').fadeOut(1000); // 1초동안 사라짐 
+		//$('#here').fadeOut(1000).fadeIn('slow'); // 1초동안 사라졌다 느리게 다시 들어옴 
+		//$('#here').slideUp('slow'); // 위로 사라짐 
+		//$('#here').slideUp('slow').slideDown(1000); // 위로 사라졌다 1초동안 다시 나옴
+		
+		
+		$('#here').animate({
+			top:200, left:400
+		});
+		var student = $('#student');
+		var name = $('#student').find('#age')
+		alert(name.text);
+		
+	}); 
+	
+	
+</script>
+</head>
+<body>
+	<div id="here">
+  		아자아자 제이쿼리~~!!! 
+   </div>
+   
+   
+   <div id="student">
+      <div id="name">홍길동</div>
+      <div id="age">34</div>
+   </div>
+</body>
+</html>

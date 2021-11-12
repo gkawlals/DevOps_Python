@@ -5,19 +5,30 @@
 <title>Video</title>
 <style type="text/css">
 canvas{
-		border: 1px solid #000;
+      border: 1px solid #000;
 }
 </style>
 <script type="text/javascript">
-
+   window.onload = function(){
+      var video = document.getElementById("video");
+      var canvas = document.getElementById("canvas");
+      
+      canvas.addEventListener('click', function(){
+         var ctx = canvas.getContext('2d');
+         //첫번째 인자로 이미지를 지정하지만 비디오를 지정하면 그 순간의 이미지의 영상을 출력
+         ctx.drawImage(video,  0,0,320,320);                   
+         //작은 화면 여러 개로
+         
+      });
+   }
 </script>
 </head>
 <body>
 <video width="320" height="240" controls="controls"  id="video">
-	<source src="../media/BigBuck.m4v" type="video/mp4"></source>
-	<source src="../media/BigBuck.theora.ogv" type="video/ogg"></source>
-	<source src="../media/BigBuck.webm" type="video/webm"></source>
-	Your browser does not support the video tag.
+   <source src="../media/BigBuck.m4v" type="video/mp4"></source>
+   <source src="../media/BigBuck.theora.ogv" type="video/ogg"></source>
+   <source src="../media/BigBuck.webm" type="video/webm"></source>
+   Your browser does not support the video tag.
 </video>
 
 <canvas id="canvas" width="320" height="240"></canvas>

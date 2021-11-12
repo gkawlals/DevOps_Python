@@ -5,8 +5,103 @@
 	<title> Javascript 객체지향 </title>
 </head>
 <body>
-<script>
-
-</script>
+	<script type="text/javascript">
+	//0. 객체 선언
+/* 	var obj = {name :'함지민', age : 25}
+	console.log(obj); */
+	
+	
+		var obj2 = new Object();
+		
+		obj2.name = '홍길동';
+		obj2.age = '25';
+		obj2.dept = '데이터분석';
+		console.log(obj2);
+		console.dir(obj2);
+		
+		var out = '';
+		with(obj2){
+			out += '이름 : ' + name + ' 나이 : ' + age + ' 부서 : ' + dept + '<br/>';
+			console.log('결과 : ' + out);
+			document.writeln(out);
+		}
+		//with 예약어 
+	
+		//*** 객체 리터럴 
+		//   * 장점 - 별도의 클래스와 같은 구조 없이 빠르게 객체를 작성하고 구성이 자유롭다
+		//   * 단점 - 구조가 미리 정의된 적이 없으므로 객체의 구조 파악이 어렵다
+		//         - 구조가 없으므로 재사용이 불가능
+		
+		//---------------------------------------------------------------
+		// 1. 클래스 선언 -  생성자로 초기화하기
+		// 생성자명은 함수명과 구별하기 위해 대문자로 시작하는 것이 일반적
+		// 클래스 명과 동일 -> 객체 생성시 이용되는 특이한 함수 
+	
+		var Student = function(name, kor, eng, math){
+			this.name = name;
+		    this.kor = kor;
+		    this.eng = eng;
+		    this.math = math;
+		
+		    this.sum = function(){
+		   	  
+		    	return kor+eng+math;
+		        
+		    };
+		 };
+		  
+		var s1 = new Student('홍동우', 100, 90, 80);
+		document.writeln(s1.name + '총점 : ' + s1.sum() + '<br/>');
+		
+		// 2. 동적으로 메소드를 추가 
+/* 		s1.showInfo = function(){
+			return this.name + ' : ' + this.kor + ' : ' + this.eng + ' : ' +  this.math + ' => ' +  this.sum() + '<br/>';
+		}
+		document.writeln(s1.showInfo()); */
+		
+		// [참고]점(.0 연산자말고 [] 연산자 가능 
+		s1['showInfo'] = function() { 
+	         return this.name + ' : ' +  this.kor + '/' + this.eng + '/' + this.math + '=>' + this.sum();
+		};
+		document.writeln(s1.showInfo() + '<br/>');
+		
+/* 		Student.prototype.showInfo = function(){ 
+			return this.name + ' : ' +  this.kor + '/' + this.eng + '/' + this.math + '=>' + this.sum(); 
+		};
+		
+		Student.prototype.sum = function(){ 
+			 return kor+eng+math; 
+		};
+ */		
+		// 4. 프로토타입 객체를 이용할 수 있다. 
+ 		Student.prototype = {
+			sum : function(){ 
+		    	return this.kor+this.eng+this.math;     
+		    },
+ 			showInfo : function(){
+ 				return this.name + ' : ' +  this.kor + '/' + this.eng + '/' + this.math + '=>' + this.sum();
+ 			}
+ 		}
+ 		var s1 = new Student('함정민', 100, 96, 85);
+		var s2 = new Student('함지민', 100, 90, 85);
+		
+		document.writeln(s1.showInfo() + '<br/>');
+		document.writeln(s2.showInfo()); // 동적으로 추가한 메소드는 해당 객체에만 추가된것이다. 
+											// 즉 s1, s2가 다르듯 s2에 showInfo메소드를 정의하지 않았기 떄문
+		console.log(s1.showInfo);
+		
+		console.log(s2.showInfo);
+		// 3. 공통적인 메소드는 프로토타입으로 생성한다. 
+		
+		var Student = function(name, kor, eng, math){
+			this.name = name;
+		    this.kor = kor;
+		    this.eng = eng;
+		    this.math = math;
+	
+		 };
+		 
+		
+	</script>
 </body>
 </html>

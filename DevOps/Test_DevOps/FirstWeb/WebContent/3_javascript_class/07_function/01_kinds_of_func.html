@@ -4,7 +4,19 @@
 	<meta charset="UTF-8">
 	<title>자바스크립트 함수 만들기</title>
 	<script>
-
+		function first(){
+			var txt = document.getElementById('first');
+			txt.style.backgroundColor = 'red';
+			txt.style.color = 'yellow';
+			
+		}
+		var second = new Function("var txt = document.getElementById('second'); txt.style.backgroundColor = 'blue'; txt.style.color = 'green';")
+		
+		var third = function(){
+			var txt = document.getElementById('third');
+			txt.style.backgroundColor = 'black';
+			txt.style.color = 'brown';
+		}
 	</script>
 </head>
 

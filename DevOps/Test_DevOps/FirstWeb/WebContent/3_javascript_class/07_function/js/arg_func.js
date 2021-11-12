@@ -14,6 +14,6 @@ function sum( key, data ){
 
 // 각각의 데이터의 곱을 구하는 함수
 var squareResult = new Array();
-function square( key, data ){			
+function square( key, data ){		
 	squareResult.push( data * data );
 }

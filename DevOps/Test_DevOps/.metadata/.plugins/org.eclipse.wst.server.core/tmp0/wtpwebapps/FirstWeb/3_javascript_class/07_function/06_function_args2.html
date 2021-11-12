@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>arguments example two </title>
+	<script type="text/javascript">
+		
+/* 		function prt(key, value){
+			document.writeln(key + ':' + value + '<br/>');	
+		} */
+		
+		function arrayWalk(data, f){
+			for (var key in data){
+				f(key, data[key]);
+			}
+		}
+		var ary = [1,2,3,4,5];
+		//arrayWalk(ary, prt);
+		
+		arrayWalk(ary, function (key, value){
+			document.writeln(key + ':' + value + '<br/>');	
+		});
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

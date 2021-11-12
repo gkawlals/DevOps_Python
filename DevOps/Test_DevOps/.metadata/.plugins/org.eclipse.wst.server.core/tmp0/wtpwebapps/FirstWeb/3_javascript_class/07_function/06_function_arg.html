@@ -2,9 +2,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>고급 함수 </title>
+	<title>고급 함수</title>
 	<script type="text/javascript" src="js/arg_func.js"></script> <!-- <script/>은 버그인가 -->	
 	<script type="text/javascript">
+		// 함수도 파라미터가 될 수 있다. 
+		function testFunc(arg){
+			
+			var data = document.frm.num;
+			if (arg == 'sum'){
+				arrayProcess(data, sum);
+				alert('합계 :' + sumResult);
+				sumResult = 0;
+			}else if (arg == 'square'){
+				arrayProcess(data, square)
+				alert('제곱 : ' + squareResult);
+				squareResult = [];
+			}
+			
+		}
+	
 	</script>
 </head>
 <body>

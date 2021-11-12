@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리의 대한 기본</title>
+<script type="text/javascript">
+	$(function(){
+		
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
