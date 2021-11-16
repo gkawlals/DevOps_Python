@@ -11,7 +11,52 @@ img{border:none 0;vertical-align:top;}
 #prevBtn{position:absolute;left:0;top:10px;} 
 #nextBtn{position:absolute;right:15px;top:10px;} 
 </style>
-
+<!-- jQuery library (served from Google) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="./css/jquery.bxslider.css" rel="stylesheet" />
+<script type="text/javascript">
+$(function(){
+	   
+	   //### bxslider.com 을 보면서  기본 속성을 지정해야 나옴.
+	   
+	  var mySlider=$("#slide_banner").bxSlider({
+	     // 1. 기본적으로 4개 보이려면 
+	     minSlides:4,           // 최소 노출 개수를 설정합니다.
+	      maxSlides:4,          // 최대 노출 개수를 설정합니다.
+	      slideMargin:10,      // 슬라이드간의 간격을 설정합니다.
+	      slideWidth:90,       // 슬라이드 마다 너비 설정.
+	   
+	      auto:true,             // 자동으로 흐를지 설정합니다.
+	      speed:200,              // 이동 속도를 설정합니다.
+	      moveSlides:1,         // 슬라이드 이동시 갯수 설정.
+	      
+	      // 기본값
+	      mode:"horizontal",   // 가로 수평으로 슬라이드 됩니다.
+	      pager:false,            // 현재 위치 페이징 표시 여부 설정.
+	  
+	      autoHover:true,    // 마우스 오버시 정시킬지 설정합니다.
+	        controls:true       // 이전 다음 버튼 노출 여부 설정합니다. -> #### 안나오는데
+	   });
+	   
+	   
+	//이전 버튼을 클릭하면 이전 슬라이드로 전환됩니다.
+	  // $("#prevBtn").on("click",function(){
+	   $("#prevBtn").click( function(){
+	    mySlider.goToPrevSlide();  //이전 슬라이드 배너로 이동됩니다.
+	    return false; //<a>에 링크를 차단합니다.
+	   });
+	//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+	   $("#nextBtn").on("click",function(){
+	    mySlider.goToNextSlide();  //다음 슬라이드 배너로 이동됩니다.
+	    return false;
+	   });
+	});
+	
+	
+</script>
 
 </head>
 <body>

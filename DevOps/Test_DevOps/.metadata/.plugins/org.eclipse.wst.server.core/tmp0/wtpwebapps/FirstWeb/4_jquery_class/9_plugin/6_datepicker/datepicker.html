@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <title>Datepicker</title>
+<script type="text/javascript"   src="../../lib/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+   $(function(){
+      $.datepicker.setDefaults($.datepicker.regional['ko']);
+      $('#datepicker').datepicker({
+//           showOn: 'button',
+//           buttonImage: 'images/calendar.gif',
+//           buttonImageOnly: true,
+//           showButtonPanel: true,
+         showAnim : 'slideDown'
+      });
+   });
+
+</script>
+
 <link rel="stylesheet" type="text/css"
   href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
 <script type="text/javascript"

@@ -3,6 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title> 제이쿼리 이벤트 연습 </title>
+<script type="text/javascript" src="../lib/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript">
+	$(function(){
+		// 기본으로 주는 글자의 크기 잡기 
+		var cnt = 12;
+		// + 버튼을 클릭하면 글자의 크기가 커지게 하기
+		$('button[id="Upbtn"]').on('click', function(){
+			cnt++; // cnt = cnt + 1;
+			console.log(cnt);
+			$('textarea[id="txt"]').css('font-size',cnt + 'px');
+		});
+		
+		// - 버튼을 클릭하면 글자의 크기가 작아지게 하기
+		$('button[id="Downbtn"]').on('click', function(){
+			cnt--; // cnt = cnt - 1 ; 
+			console.log(cnt);
+			$('textarea[id="txt"]').css('font-size',cnt + 'px');
+		});
+
+		
+		// select 태그내의 option을 골라 글꼴의 스타일을 바꾸기 
+		$('select[name="fontstyle"').on('change',function(){
+			var idx = $('#fontstyle option').index($('#fontstyle option:selected'));
+			console.log(idx);
+			if ( idx == 0 ){
+				$('textarea[id="txt"]').css('font-family','Georgia');
+				console.log("dotum");
+			}
+			else if ( idx == 1 ){
+				$('textarea[id="txt"]').css('font-family','Apple SD Gothic Neo');
+				console.log("Apple SD Gothic Neo");
+			}
+			else if ( idx == 2 ){
+				$('textarea[id="txt"]').css('font-family','Malgun Gothic');
+				console.log("magun gothis");
+			}
+			else if ( idx == 3 ){
+				$('textarea[id="txt"]').css('font-family','sans-serif');
+				console.log("sans-serif");
+			}
+			else if ( idx == 4 ){
+				$('textarea[id="txt"]').css('font-family','Helvetica');
+				console.log("sans-serif");
+			};
+			
+		});
+		
+	});
+	
+
+</script>
 </head>
 <body>
 
@@ -10,8 +61,8 @@
 		<dl>
 				<dt> 글씨크기 </dt>
 				<dd class='fontSize'>
-					<button> + </button>
-					<button> - </button>
+					<button id="Upbtn"> + </button>
+					<button id="Downbtn"> - </button>
 				</dd>
 				<dt> 글씨체 </dt>
 				<dd class='fontStyle'>
@@ -20,6 +71,7 @@
 						<option value='gulim,"굴림", sans-serif '>굴림</option>
 						<option value='magun gothis,"맑은고딕", sans-serif '>맑은고딕</option>
 						<option value='"궁서", sans-serif '>궁서</option>
+						<option value='"추가 ", sans-serif '>추가</option>
 					</select>
 				</dd>
 		</dl>
