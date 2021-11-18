@@ -1,3 +1,6 @@
+candidate.for.install.coupon=false
+codemix.license.coupon.offered=true
+codemix.newfile.notification.html=false
 codemix.settings.migration=true
 codemix.show.control.panel.tip=shown
 contextual.actions.preferences.migrated=true

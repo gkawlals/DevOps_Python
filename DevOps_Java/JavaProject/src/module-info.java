@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author hamjimin
+ *
+ */
+module JavaProject {
+}
