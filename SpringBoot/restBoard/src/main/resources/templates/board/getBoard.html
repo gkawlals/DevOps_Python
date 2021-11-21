@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>게시판 목록</title>
+<style>
+	table {
+		border-collapse: collapse;
+	}
+	th {
+		background-color: orange;
+	}
+</style>
+</head>
+<body align="center">
+	<h2>게시글 상세</h2>
+	<table align="center" border="1" width="60%">
+		<tr>
+			<td bgcolor="orange" width="30%">제목</td>
+			<td><input type="text" name="title" size="40" th:value="${board.title}" disabled></td>
+		</tr>
+		<tr>
+			<td bgcolor="orange">작성자</td>
+			<td th:text="${board.writer}"></td>
+		</tr>
+		<tr>
+			<td bgcolor="orange">내용</td>
+			<td><textarea name="content" cols="42" rows="10" th:text="${board.content}" disabled></textarea></td>
+		</tr>
+		<tr>
+			<td bgcolor="orange">등록일</td>
+			<td th:text="${board.createDate}"></td>
+		</tr>
+		<tr>
+			<td bgcolor="orange">조회수</td>
+			<td th:text="${board.cnt}"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><a th:href="@{updateBoard(seq=${board.seq})}"><input type="button" value="게시글 수정"></a></td>
+		</tr>
+	</table>
+	<a th:href="@{insertBoard}">글 등록</a>
+	<a th:href="@{boardlist}">글 목록</a>
+	<a th:href="@{deleteBoard(seq=${board.seq})}">글 삭제</a>
+</body>
+</html>
