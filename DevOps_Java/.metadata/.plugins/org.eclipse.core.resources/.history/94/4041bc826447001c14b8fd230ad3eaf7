@@ -1,0 +1,22 @@
+package class_method;
+
+import java.util.Scanner;
+
+public class Grade_input {
+	
+	public void Input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("성적을 입력하세요");
+		sc.nextInt();
+		grade()';'
+		
+	}
+	
+	public void grade(int number) {
+		
+		if(number == 100 || number >= 90) {
+			System.out.println("A");
+		}
+	}
+
+}

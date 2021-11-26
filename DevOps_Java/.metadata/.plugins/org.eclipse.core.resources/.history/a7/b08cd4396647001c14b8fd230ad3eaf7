@@ -1,0 +1,16 @@
+package class_method;
+
+public class GradeMain {
+
+	public static void main(String[] args) {
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.println("성적을 입력하세요");
+			Grade_input input = new Grade_input();
+			input.Input();	
+		}
+		
+
+	}
+
+}

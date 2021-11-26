@@ -1,0 +1,9 @@
+package com.restBoard.member.vo;
+
+public class MemberVO {
+	private String id;
+	private String pwd;
+	private String name;
+	private String tel;
+	private String email;
+}

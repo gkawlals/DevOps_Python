@@ -1,0 +1,42 @@
+package Exam03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Quiz01_Main {
+	public void run() {
+		// TODO Auto-generated method stub
+		Quiz01_Run qr = new Quiz01_Run();
+		
+		List<Score> score = new ArrayList<Score>();
+		
+		while(true) {
+
+			qr.menu();
+			int menu = qr.input();
+			switch(menu) {
+			case 1:
+			case 3:
+				String str = null;
+				if(menu == 1) {
+					str = "입력";
+				} else if(menu == 3) {
+					str = "수정";
+				}
+				name = qr.insert(str);
+				kor = qr.insertScore("국어");
+				eng = qr.insertScore("영어");
+				math = qr.insertScore("수학");
+				break;
+			case 2:
+				qr.ouputScore(name, kor, eng, math);
+				break;
+			case 0:
+				System.out.println("프로그램 종료");
+				return;
+			default:
+				System.out.println("메뉴를 잘 못 입력 하셨습니다.\n");
+			}
+		}
+	}
+}

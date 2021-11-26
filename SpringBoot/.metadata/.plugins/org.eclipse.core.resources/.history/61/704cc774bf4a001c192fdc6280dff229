@@ -1,0 +1,14 @@
+package com.restBoard.board.controller;
+
+import org.springframework.stereotype.Controller;
+
+
+@Controller
+public class BoardContoller {
+	
+	@RequestMapping("boardList")
+	public String boardList() {
+		return "hello board";
+	}
+
+}

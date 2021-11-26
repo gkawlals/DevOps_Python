@@ -1,0 +1,43 @@
+{%extends 'index.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    add page
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <table  class="table table-striped">
+                <tr>
+                    <td>이름</td>
+                    <td width="200px"><input type="text" name="name"/></td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td width="200px"><input type="text" name="tel"/></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td width="200px"><input type="email" name="email"/></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td width="200px"><input type="text" name="add"/></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td width="200px"><input type="date" name="birth"/></td>
+                </tr>
+            </table>
+            <input type="submit" value="추가하기" class="btn btn-success"  onclick="location.href='{% url 'PB:AddUrl' %}'" />
+        </form>
+    </div>
+{%endblock%}
+</body>
+</html>

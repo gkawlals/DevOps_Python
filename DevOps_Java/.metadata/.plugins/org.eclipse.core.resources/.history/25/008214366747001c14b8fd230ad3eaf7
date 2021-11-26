@@ -1,0 +1,18 @@
+package class_method;
+
+public class GradeMain {
+
+	public static void main(String[] args) {
+		int tot = 0;
+		for (int i = 0; i < 3; i++) {
+			System.out.println("성적을 입력하세요");
+			Grade_input input = new Grade_input();
+			tot += input.Input();	
+		}
+		int avg = tot / 3; 
+		System.out.println("성적의  평균 :" + avg);
+		
+
+	}
+
+}

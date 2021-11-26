@@ -1,0 +1,5 @@
+package com.restBoard.board.controller;
+
+public class BoardContoller {
+
+}

@@ -1,0 +1,23 @@
+package com.restBoard.member.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.restBoard.member.dao.MemberDAO;
+import com.restBoard.member.vo.MemberVO;
+
+@Service
+public class MemberService {
+	
+	@Autowired
+	MemberDAO dao;
+
+	public void joinMember(MemberVO vo) {
+		
+		int cnt = dao.idCheck(vo.getUser_id());
+		
+		dao.joinMember(vo);
+		
+	}
+
+}

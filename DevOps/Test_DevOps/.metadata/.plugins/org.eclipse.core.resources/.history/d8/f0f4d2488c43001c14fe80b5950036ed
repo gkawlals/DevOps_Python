@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class Add, Del</title>
+
+<style type="text/css">
+	
+	.active{
+		border : 3px solid red;
+	}
+	
+</style>
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.man').css('background','#94B3FD');
+		$('.woman').css('background','#FF5DA2');
+		
+		// 2. 
+		var redBox = $('.inputText');
+		/* redBox.focus(function(){
+			redBox.addClass('active'); // class를 추가하여 여러가지 스타일을 줄 수 있다.
+		});
+		
+		redBox.blur(function(){
+			redBox.removeClass('active');
+		}); */
+		
+		redBox.focus(function(){
+			$(this).addClass('active');
+		});
+		redBox.blur(function(){
+			$(this).removeClass('active');
+		});
+		
+		
+		// 3. 
+		$('#divText').text("<img src='images/puppy.jpg'/>");
+		$('#divHtml').html("<img src='images/puppy.jpg'/>");
+		$('#divEmpty').empty();
+		var Grim = $('#changeGrim');
+		Grim.attr('src','images/cat.jpg');
+		Grim.click(function(){
+			Grim.css('border','3px dotted #2FDD92');
+			alert('그림을 선택함');
+		});
+		
+		
+		// 4. 
+		$('#tf').val('저는 함지민입니다.');
+		$('#ta').val('작성중.......');
+		$('#sel').val('masan');
+		$('#sel_m').val(['seom2','seom4']);
+		
+		// 성별버튼을 만들고 선택되었는지 확인한다? Ex) $('radio:checked').val()
+		$('radio:checked').attr('checked','true');
+		// 확인버튼 클릭 -> 값들 가져오기
+		$('check').click(function(){
+			$('#ta').val($('#sel').checked.val ,$('#sel_m').checked.val );
+		});
+		
+		
+		//5. 
+		var actor = $('#actor');
+		var tae = $('#tae');
+		var su = $('#su');
+		var bin = $('#bin');
+		
+		actor.append(tae);
+		su.appendTo(actor);
+		
+		var n = $('<div/>');
+		n.text('강새벽');
+		n.appendTo(actor)
+		
+		var data = [];
+		
+		for (var i in data){
+			
+		}
+	});
+</script>
+</head>
+<body>
+	   <!--  1 -->
+	   <ul>
+	      <li class="man">김수현</li>
+	      <li class="woman">김희애</li>
+	      <li class="woman">송혜교</li>
+	      <li class="man">하정우</li>
+	      <li class="woman">김태희</li>
+	   </ul>
+   
+	   <!-- 2 -->
+	   <input type="text" class="inputText"/>
+	   <input type="text" class="inputText"/>
+	   <input type="text" class="inputText"/>
+   
+
+   <!-- 3 -->
+	      <div id="divText">여기에 글씨를</div>
+	      <div id="divHtml">여기에 그림을</div>
+	      <div id="divEmpty">여기를 비움</div>
+      <p>
+      	<img src="images/puppy.jpg" id='changeGrim'>
+      </p>
+      
+   <!-- 4 -->   
+      <p>
+	      <input id="tf" type="text" size="20" />
+	      
+	      <textarea id="ta" rows="3" cols="20"></textarea>
+	      
+	      <select id="sel">
+	         <option value="seoul">서울</option>   <!-- option에 value 값 없어도 됨 -->
+	         <option value="busan">부산</option>
+	         <option value="masan">마산</option>
+	         <option value="incheon">인천</option>
+	      </select>
+	      
+	      <select id="sel_m" multiple="multiple">
+	         <option value="seom1">제주도</option>
+	         <option value="seom2">울릉도</option>
+	         <option value="seom3">독도</option>
+	         <option value="seom4">거제도</option>
+	      </select>
+      
+	      <input type='button' id='check' value='확인'/>
+	      <input type='button' id='sel' value='초기화'/> 
+	      <!--  [과제] 클릭시 값 지정하려면  -->
+	      <div id='result'></div>
+	      
+      </p>
+      
+   <!-- 5 -->
+      <div id="actor">배우</div>
+      <div id="tae">김태희</div>
+      <div id="su">김수현</div>
+      <div id="bin">현빈</div>
+      <!-- [ 과제 ] 동적 테이블 만들기  -->
+
+   <!-- 6 -->
+      <div class="data">이름</div>
+      <div class="data">직업</div>
+      <div class="data">나이</div>
+
+</body>
+</html>

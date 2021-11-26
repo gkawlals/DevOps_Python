@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table  class="table table-striped">
+
+        <tr>
+            <td>이름</td>
+            <td width="200px">{{ pb_user.이름 }}</td>
+        </tr>
+        <tr>
+            <td>전화번호</td>
+            <td width="200px">{{ pb_user.전화번호 }}</td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td width="200px">{{ pb_user.이메일 }}</td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td width="200px">{{pb_user.주소}}</td>
+        </tr>
+        <tr>
+            <td>생년월일</td>
+            <td width="200px">{{pb_user.생년월일}}</td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td width="200px">{{pb_user.작성자}}</td>
+        </tr>
+
+    </table>
+   
+    <input type="button" class="btn btn-success" value="Main" onclick="location.href='{% url 'PB:IndexUrl' %}'"/>
+    {% if user.is_active == pb_user.작성자 or user.username == 'admin' %}
+        <input type="button" class="btn btn-info" value="Update" onclick="location.href='{% url 'PB:UpdateUrl' pb_user.id %}'"/>
+        <input type="button" class="btn btn-success" value="Delete" onclick="location.href='{% url 'PB:DeleteUrl' pb_user.id %}'"/>
+    {%endif%}
+    {%endblock%}
+    {% block menu_active %}
+    <script>
+        document.getElementById("phone").className="active";
+    </script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+package com.restBoard.member.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.restBoard.member.vo.MemberVO;
+
+@Controller
+@RequestMapping("member")
+public class MemberController {
+	
+//	@GetMapping("login")
+//	public String login() {
+//		return "member/login";
+//	}
+	
+	@PostMapping("login")
+	public String login(String user_id, String user_pwd) {
+		
+		System.out.println("user_id : " + user_id);
+		System.out.println("user_pwd : " + user_pwd);
+		
+		return "member/login";
+	}
+	
+	@GetMapping("joinMember")
+	public String login() {
+		return "member/joinMember";
+	}
+	@GetMapping("joinMember")
+	public String login(MemberVO vo) {
+		
+		System.out.println("user_id"+vo.getId());
+		System.out.println("user_pwd"+vo.getPwd());
+		System.out.println("user_name"+vo.getId());
+		System.out.println("user_id"+vo.getId());
+		System.out.println("user_id"+vo.getId());
+		return "member/joinMember";
+	}
+	
+	
+}

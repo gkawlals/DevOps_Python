@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리의 대한 기본</title>
+<script type="text/javascript">
+
+	/*****  1. CORE
+	$('#here').hide();
+	   
+	jQuery(function( $ ) {
+	    $('#here').hide();
+	});
+	
+	
+	$(document).ready( function() {
+	   $('#here').hide();
+	});
+	
+	$(function(){
+	    $('#here').hide();
+	});
+	 */
+	$(function(){
+		
+	});
+	 
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

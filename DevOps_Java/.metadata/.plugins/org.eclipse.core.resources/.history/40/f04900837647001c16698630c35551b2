@@ -1,0 +1,12 @@
+package Exam02;
+
+import java.util.ArrayList;
+
+public class Exam02 {
+	public static void main(String[] args) {
+		List<Score> li = new ArrayList<Score>();
+		
+		Score s = new Score();
+	
+	}
+}

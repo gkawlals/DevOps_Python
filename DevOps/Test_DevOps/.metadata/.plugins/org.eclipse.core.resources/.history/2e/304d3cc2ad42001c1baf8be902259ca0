@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>리터럴 함수</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 함수는 데이터형의 일종이다.
+		
+		var triangle = function(base, height){
+			return base * height/2
+		} 
+		
+		document.witeln('삼각형의 면적 : ' + triangle(4,5) + '<br/>');
+		document.witeln('삼각형의 면적 : ' + triangle() + '<br/>');
+		
+		triangle = "문자로 변환";
+		
+		
+		document.witeln(triangle + '<br/>');
+		
+		
+	</script>
+</body>
+</html>

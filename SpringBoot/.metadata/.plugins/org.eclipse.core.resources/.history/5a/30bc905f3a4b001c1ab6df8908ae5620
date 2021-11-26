@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style>
+	table {
+		border-collapse: collapse;
+	}
+	th {
+		background-color: orange;
+	}
+</style>
+<script type="text/javascript">
+	window.onload(function (){
+		var join = "${join}";
+		console.log(join);
+	});
+	function joinCheck(){
+		var id = frm.user_id.value;
+		var pwd = frm.user_pwd.value;
+		var email = frm.user_email.value;
+		var tel = frm.user_tel.value;
+		var name = frm.user_name.value;
+		var email = frm.user_email.value;
+		
+		if(id == ""){
+            alert('아이디가 입력되지 않았습니다.');
+            frm.id.focus();
+         } else if(pwd == ""){
+            alert('암호가 입력되지 않았습니다.');
+            frm.pwd.focus();
+         } else if(name == ""){
+            alert('이름이 입력되지 않았습니다.');
+            frm.name.focus();
+         } else if(tel == ""){
+            alert('전화번호가 입력되지 않았습니다.');
+            frm.telnum.focus();
+         } else if(email == ""){
+            alert('이메일이 입력되지 않았습니다.');
+            frm.email.focus();
+         }else{
+        	 frm.action="joinMember";
+        	 frm.method="post";
+        	 frm.submit();
+         }
+
+		
+	}
+	
+	function idCheck(){
+		var id = frm.user_id.value;
+		var t = confirm(id + "를 사용하시겠습니까?");
+		if (!t){
+			id="";
+			id.focus();
+		}
+	}
+	
+	function pwdCheck(){
+		var pwd = frm.user_pwd.value();
+		var pwd2 = frm.user_pwd2.value();
+		
+		if(pwd == pwd2){
+			alert(" 비밀번호가 일치합니다 ");
+			frm.user_name.focus();
+		}else {
+			alert(" 비밀번호가 불일치합니다 ");
+			pwd2.value="";
+			pwd.value="";
+			pwd.focus();
+		}
+		
+	}
+	
+</script>
+</head>
+<body align="center">
+	<form name="frm" method="post">
+		<table align="center" width="70%" border="1">
+			<tr>
+				<th colspan="2" bgcolor="orange">회원 가입</th>
+			</tr>
+			<tr>
+				<th bgcolor="orange">아이디</th>
+				<td><input type="text" name="user_id" onchange="idCheck()"></td>
+			</tr>
+			<tr>
+				<th bgcolor="orange">비밀번호</th>
+				<td><input type="password" name="user_pwd"></td>
+			</tr>
+			<tr>
+				<th bgcolor="orange">비밀번호 확인</th>
+				<td><input type="password" name="user_pwd2" onchage="pwdCheck()"></td>
+			</tr>
+			<tr>
+				<th bgcolor="orange">이름</th>
+				<td><input type="text" name="user_name"></td>
+			</tr>
+			<tr>
+				<th bgcolor="orange">전화번호</th>
+				<td><input type="text" name="user_tel"></td>
+			</tr>
+			<tr>
+				<th bgcolor="orange">이메일</th>
+				<td><input type="email" name="user_email"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="회원가입" onclick="joinCheck()">
+					<input type="reset" value="다시 입력">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

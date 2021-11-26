@@ -1,0 +1,14 @@
+package com.restBoard.member.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.restBoard.member.dao.MemberDAO;
+
+@Service
+public class MemberService {
+	
+	@Autowired
+	MemberDAO dao;
+
+}

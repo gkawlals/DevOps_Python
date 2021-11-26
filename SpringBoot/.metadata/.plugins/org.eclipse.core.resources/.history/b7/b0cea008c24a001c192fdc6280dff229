@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body align="center">	
+<h1>게시글 목록</h1>
+	<div>
+		<table border="2">
+			<th>번호</th><th width="400px">제목</th><th>작성자</th><th>조회수</th>
+		</table>
+	</div>
+</body>
+</html>

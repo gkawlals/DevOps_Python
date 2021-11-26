@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GoHome(){
+            location.href='{% url 'PB:IndexUrl' %}'
+        }
+    </script>
+</head>
+<body>
+    phone book detail 페이지 입니다.
+    <ul>
+        <ol>
+            이름 : {{user.id}}
+        </ol>
+        <ol>
+            전화번호 : {{user.이름}}
+        </ol>
+        <ol>
+            이메일 : {{user.전화번호}}
+        </ol>
+        <ol>
+            주소 : {{user.주소}}
+        </ol>
+        <ol>
+            생년 월일 : {{user.생년월일}}
+        </ol>
+    </ul>
+    <input type="button" value="SCRIPT" onclick="GoHome()"/>
+    <input type='button' value="홈으로" onclick="location.href='{% url 'PB:IndexUrl' %}'"/>
+    <input type='button' value="수정" onclick="location.href='{% url 'PB:UpdateUrl' %}'"/>
+    <input type='button' value="삭제" onclick="location.href='{% url 'PB:DeleteUrl' %}'"/>
+    <input type='button' value="더하기" onclick="location.href='{% url 'PB:AddUrl' %}'"/>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.restBoard.member.controller;
+
+public class MemberService {
+
+}

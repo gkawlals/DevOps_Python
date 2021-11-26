@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		alert("가입에 성공했습니다. ");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

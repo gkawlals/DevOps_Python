@@ -1,0 +1,10 @@
+package If_Eample;
+
+import java.util.Scanner;
+
+public class if_02 {
+	public static void main(String[] args) {
+		Sacnner sc = new Scanner(System.in);
+	}
+
+}

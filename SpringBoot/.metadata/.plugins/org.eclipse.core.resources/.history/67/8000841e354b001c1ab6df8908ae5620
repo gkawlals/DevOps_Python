@@ -1,0 +1,18 @@
+package com.restBoard.member.dao;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.restBoard.member.vo.MemberVO;
+
+@Repository
+public class MemberDAO {
+	
+	SqlSessionTemplate sqlSessionTemplate;
+
+	public void joinMember(MemberVO vo) {
+		sqlSessionTemplate.insert(null);
+		
+	}
+
+}

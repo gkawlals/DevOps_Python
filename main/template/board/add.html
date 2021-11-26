@@ -1,0 +1,27 @@
+{%extends 'index.html'%}
+{%block Bcontext%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>게시판 입력</h3>
+        <form method="POST" name="frm">
+            {%csrf_token%}
+            <div class="input-group">
+                <span class="input-group-addon">제목 </span>
+                <input id="user_id" type="text" class="form-control" name="title" placeholder="게시글 제목 ">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">내용</span>
+                <textarea placeholder="게시 내용" rows="8" class="form-control" name="context"></textarea>
+            </div class="input-group">
+            <hr>
+            <input class="btn btn-success" type="submit" value="글 등록" /><br>
+        </form>
+</body>
+</html>
+{%endblock%}

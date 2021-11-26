@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 변수와 범위</title>
+	<script>
+	// 글로벌 변수와 지역변수
+	var scope = '글로벌 변수';
+	function getValue(){
+		
+		var scope = '지역변수';
+		return scope;
+	}
+	
+	var scope = '글로벌 변수';
+	function getValue(){
+		
+		var scope = '지역변수';
+		return scope;
+	}
+	
+	document.writeln('1>' + getValue() + '<br/>');
+	document.writeln('2>' + scope); // var 명령어를 사용하지 않으면 글로벌 변수로 취급 
+
+	</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

@@ -1,0 +1,55 @@
+$('#signup form').validate({
+    rules: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      website: {
+        url: true
+      },
+      password: {
+        minlength: 6,
+        required: true
+      },
+      passconf: {
+        equalTo: "#password"
+      }
+    },
+
+    success: function(label) {
+      label.addClass('valid');
+      // 또는
+      label.text('성공');
+    }
+ 
+ $(function(){
+ 	$('#signup form').validate({
+    rules: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      website: {
+        url: true
+      },
+      password: {
+        minlength: 6,
+        required: true
+      },
+      passconf: {
+        equalTo: "#password"
+      }
+    },
+
+    success: function(label) {
+      label.addClass('valid');
+      // 또는
+      label.text('성공');
+    }
+ });

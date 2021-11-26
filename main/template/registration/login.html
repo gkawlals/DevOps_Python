@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            margin : 5px;
+        }
+        form div{
+            padding : 5px;
+            width:70%;
+        }
+
+        .input-group-size input{
+            width: 100px;
+        }
+
+        .input-group-addon{
+            width : 30% ;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div class="input-group">
+          <span class="input-group-addon">Login ID </span>
+          <input id="password" type="text" class="form-control" name="username" placeholder="Login ID">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">PassWord</span>
+          <input id="password" type="password" class="form-control" name="password" placeholder="PassWord">
+        </div>
+        <div class="input-group-size">
+            <input type="submit" class="btn btn-success" name="test"value="로그인" />  
+            <input type="reset" class="btn btn-warning" name="test"value="다시입력"/>
+            <input type="button" class="btn btn-info" name="test" value="Main" onclick="location.href='{%  url 'start'  %}'">
+        </div>
+      </form>
+    {%endblock%}
+    {% block menu_active %}
+    <script>
+        document.getElementById("login").className="active";
+    </script>
+    {% endblock %}
+</body>
+</html>

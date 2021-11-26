@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <script>
+        function pwCheck(){
+            var pwd = frm.pwcheck.value;
+            var pwd2 = frm.password.value;
+
+            if ( pwd == pwd2){
+                alert("비밀번호가 일치합니다");
+            }else{
+                alert("비밀번호를 확인해주세요");
+                pwd.value="";
+                pwd2.value = "";
+                pwd2.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>계정 등록 </h2>
+    <form method="POST" name="frm">
+        {%csrf_token%}
+        <div class="input-group">
+            <span class="input-group-addon">사용자 ID </span>
+            <input id="user_id" type="text" class="form-control" name="username" placeholder="사용자 ID">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">PassWord</span>
+            <input id="pwd" type="password" class="form-control" name="password" placeholder="PassWord">
+        </div class="input-group">
+        <div class="input-group"> 
+            <span class="input-group-addon">PWD Check</span>
+            <input id="pwd2" type="password" class="form-control" onchange="pwCheck()" name="pwcheck" placeholder="PWD Check">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">사용자 이름</span>
+            <input id="password2" type="text" class="form-control" name="first_name" placeholder="PWD Check">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">사용자 성</span>
+            <input id="password2" type="text" class="form-control" name="last_name" placeholder="PWD Check">
+        </div>
+        <div class="input-group"> 
+            <span class="input-group-addon">이메일</span>
+            <input id="password2" type="email" class="form-control" name="email" placeholder="PWD Check">
+        </div>
+        <hr>
+        <input class="btn btn-success" type="submit" value="회원등록" /><br>
+    </form>
+    {%endblock%}
+    {% block menu_active %}
+    <script>
+        document.getElementById("home").className="active";
+    </script>
+    {% endblock %}
+</body>
+</html>

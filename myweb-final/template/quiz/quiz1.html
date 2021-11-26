@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1</title>
+</head>
+<body>
+    <p>값 출력</p>
+    {{ 번호 }}
+    <p>단일 for문으로 출력</p>
+    {% for value in 번호 %}
+        {{ value }}<br>
+    {% endfor %}
+    <br>
+    <p>이중 for문으로 출력</p>
+    <table border="1">
+    {% for values in 번호 %}
+    <tr>
+        {% for val in values %}
+            <td>{{ val }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

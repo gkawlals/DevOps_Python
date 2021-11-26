@@ -1,0 +1,23 @@
+package Exam03;
+
+public class Quiz01_Main {
+	public void run() {
+		// TODO Auto-generated method stub
+		Quiz01_Run qr = new Quiz01_Run();
+
+		int kor=0,eng=0,math=0;
+		String name = null;
+
+		while(true) {
+
+			qr.menu();
+			int menu = qr.input();
+
+			switch(menu) {
+			case 1:
+			case 3:
+				String str = null;
+				if(menu == 1) {
+					str = "입력";
+				} else if(menu == 3) {
+					…

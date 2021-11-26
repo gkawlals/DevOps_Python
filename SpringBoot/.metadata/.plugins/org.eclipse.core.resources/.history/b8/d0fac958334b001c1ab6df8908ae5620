@@ -1,0 +1,8 @@
+package com.restBoard.member.dao;
+
+import org.springframework.stereotype.Service;
+
+@Service("MemberService")
+public class MemberDAO {
+
+}

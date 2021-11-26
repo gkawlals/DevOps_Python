@@ -1,0 +1,28 @@
+package com.restBoard.member.dao;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.restBoard.member.vo.MemberVO;
+
+@Repository
+public class MemberDAO {
+	
+	SqlSessionTemplate sqlSessionTemplate;
+
+	public void joinMember(MemberVO vo) {
+		sqlSessionTemplate.insert("memberMapper.joinMember",vo);
+		
+	}
+
+	public int idCheck(String user_id) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectOne("memberMapper.idCheck",user_id);
+	}
+
+	public int loginCheck(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectOne("memberMapper.idCheck",vo);
+	}
+
+}

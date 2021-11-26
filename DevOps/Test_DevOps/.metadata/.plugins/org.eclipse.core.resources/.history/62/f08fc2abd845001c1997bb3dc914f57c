@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.min.js" ></script> 
+<script type="text/javascript" >
+	$(document).ready(init);
+		function init(){
+			$('#myBtn').click(mycheck);
+			console.log('ok');
+		}
+		function mycheck(){
+			$('#myP').append($('div').find('input').end());
+			console.log('ko');
+		}
+	
+</script> 
+</head>
+<body>
+	test......
+	<div></div>
+	<div></div>
+	<div></div>
+	<input id="myBtn" type="button" value="눌러보세요"/>
+	<p id="myP"> 
+		여기아래에... 위에 div 태그를 가져오네. 위의 div태그는 삭제되고
+		end()의 수행결과가 perObject임....^ㅗ^ ㅗ</p>
+</body>
+</html>

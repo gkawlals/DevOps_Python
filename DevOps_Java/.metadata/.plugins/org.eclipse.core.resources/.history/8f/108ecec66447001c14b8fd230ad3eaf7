@@ -1,0 +1,30 @@
+package class_method;
+
+import java.util.Scanner;
+
+public class Grade_input {
+	
+	public void Input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("성적을 입력하세요");
+		int number = sc.nextInt();
+		grade(number);
+		
+	}
+	
+	public void grade(int number) {
+		
+		if(number == 100 || number >= 90) {
+			System.out.println("A");
+		}else if(number >= 89 || number >= 80) {
+			
+		}else if(number >= 79 || number >= 70) {
+			
+		}else if(number >= 69 || number >= 60) {
+			
+		}else {
+			System.out.println("잘못된 점수입니다.");
+		}
+	}
+
+}

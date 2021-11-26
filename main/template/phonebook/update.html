@@ -1,0 +1,52 @@
+{%extends 'index.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GoHome(){
+            location.href='{% url 'PB:IndexUrl' %}'
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <span>
+            <form method="POST"> <!-- action의 값이 없으면 자기 자신의 url을 호출한다. -->
+                {% csrf_token %}
+                <table  class="table table-striped">
+                    <tr>
+                        <td>이름</td>
+                        <td width="200px"><input type="text" value='{{pb_user.이름 }}' name="name"/></td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td width="200px"><input type="text" value='{{pb_user.전화번호 }}' name="tel"/></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td width="200px"><input type="email" value='{{pb_user.이메일 }}' name="email"/></td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td width="200px"><input type="text" value='{{pb_user.주소 }}' name="add"/></td>
+                    </tr>
+                    <tr>
+                        <td>생년월일</td>
+                        <td width="200px"><input type="date" value='{{pb_user.생년월일 }}' name="birth"/></td>
+                    </tr>
+                </table>
+                <input type="submit" value="수정하기"/>
+            </form>
+        </span>
+
+    </div>
+    <input type="button" value="Main" onclick="GoHome()"/>
+{%endblock%}
+</body>
+</html>

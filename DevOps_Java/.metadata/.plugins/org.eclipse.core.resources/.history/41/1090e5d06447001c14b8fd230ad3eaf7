@@ -1,0 +1,10 @@
+package class_method;
+
+public class GradeMain {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
