@@ -8,7 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    게시판 수정
+    <h3>게시판 수정</h3>
+        <form method="POST" name="frm">
+            {%csrf_token%}
+            <div class="input-group">
+                <span class="input-group-addon">제목 </span>
+                <input id="user_id" value="{{board.board_title}}" type="text" class="form-control" name="title">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">내용</span>
+                <textarea rows="8" class="form-control" name="context">{{board.board_context}}</textarea>
+            </div class="input-group">
+            <hr>
+            <input class="btn btn-success" type="submit" value="글 수정" /><br>
+        </form>
 </body>
 </html>
 {%endblock%}

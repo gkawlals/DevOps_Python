@@ -127,3 +127,5 @@ STATICFILES_DIRS=[
 LOGIN_URL='/account/login/'
 LOGOUT_URL='/account/logout/'
 LOGIN_REDIRECT_URL='/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media') # only download
+MEDIA_URL = '/media/'

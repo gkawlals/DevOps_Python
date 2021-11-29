@@ -17,7 +17,23 @@
     </tr>
     {% endfor %}
 </table>
-<input type="button" class="btn btn-success" value="글 등록" onclick=document.location.href="{% url 'BD:BAdd'%}">
+<input type="button" class="btn btn-success" value="글 등록" onclick='document.location.href="{% url 'BD:BAdd' %}"'>
+<br>
+    {% if  boardTable.has_previous%}
+        <input type="button" value="이전" onclick='document.location.href="{% url 'BD:BIndex' boardTable.previous_page_number %} "'/> 
+    {% else %}
+        <input type="button" value="이전" disabled/> 
+    {% endif %}
+    {% for i in boardTable.paginator.page_range %}
+        <button onclick='document.location.href="{% url 'BD:BIndex' boardTable.next_page_number %}"' >{{i}}</button>
+    {% endfor %}
+    {% if boardTable.has_next %}
+        <input type="button" value="다음" onclick='document.location.href="{% url 'BD:BIndex' boardTable.next_page_number %}"'/> <br>
+    {% else %}
+        <input type="button" value="다음" disabled/> 
+    {% endif %}
+
+
 {% endblock %}
 {% block menu_active %}
 <script>

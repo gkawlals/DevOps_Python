@@ -42,7 +42,7 @@
           <ul class="nav navbar-nav">
             <li id ="home"><a href="/">Home</a></li>
             <li id ="phone"><a href="{% url 'PB:IndexUrl' %}">주소록</a></li>
-            <li id ="board"><a href="#">Page 2</a></li>
+            <li id ="board"><a href="{% url 'BD:BIndex' 1%}">게시판</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_active %}

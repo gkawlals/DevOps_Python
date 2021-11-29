@@ -9,7 +9,7 @@
 </head>
 <body>
     <h3>게시판 입력</h3>
-        <form method="POST" name="frm">
+        <form method="POST" name="frm" enctype="multipart/form-data">
             {%csrf_token%}
             <div class="input-group">
                 <span class="input-group-addon">제목 </span>
@@ -19,6 +19,10 @@
                 <span class="input-group-addon">내용</span>
                 <textarea placeholder="게시 내용" rows="8" class="form-control" name="context"></textarea>
             </div class="input-group">
+            <div class="input-group">
+                <span class="input-group-addon">파일 선택</span>
+                <input type="file" name="files" class="form-control" multiple />
+            </div>
             <hr>
             <input class="btn btn-success" type="submit" value="글 등록" /><br>
         </form>
